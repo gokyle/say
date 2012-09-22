@@ -1,0 +1,36 @@
+.Dd $Mdocdate$
+.Dt SAY 1
+.Os
+.Sh NAME
+.Nm say
+.Nd speak text from the command line
+.Sh SYNOPSIS
+.Nm
+.Op Ar -
+.Op Ar text
+.Sh DESCRIPTION
+.Nm
+speaks text from the command line using festival.
+.Sh USAGE
+If - is passed on the command line, the text is read from stdin. Otherwise,
+it will join the arguments passed into the function and pass that to
+festival.
+.Sh EXIT STATUS
+.Ex -std
+.Sh EXAMPLES
+Speak "Hello, world." from stdin:
+.Dl $ echo "Hello, world." | say -
+Speak "Hello, world." from arguments:
+.Dl $ say "Hello, world."
+.Sh AUTHORS
+.Nm
+was written by
+.An Kyle Isom Aq Mt kyle@tyrfingr.is .
+.\" .Sh CAVEATS
+.\" .Sh BUGS
+.Sh LICENSE
+.Nm
+is released under a public domain / ISC dual license. The license is
+available
+.Lk http://www.tyrfingr.is/licenses/LICENSE.DUAL "online" ,
+
