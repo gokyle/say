@@ -5,6 +5,7 @@ MANPATH=${PREFIX}/man
 SUDO=sudo
 
 $TARGET:
+    go get
     go build -x -v -o ${TARGET}
 
 clean:V:
